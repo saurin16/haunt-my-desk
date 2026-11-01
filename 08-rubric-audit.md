@@ -4,7 +4,7 @@
 |---|---|---|
 | Innovation | A chat command marks a real desk object and invites a physical camera response. Indexed adjacent entries are virtual games, spoken traps, or story votes; gallery is incomplete. | Show genuine on-camera payoff; do not assert absolute uniqueness. |
 | Potential impact / entertainment | Local browser loop is understandable and visually legible. | Filmed reaction from a real viewer/streamer; no engagement outcome yet. |
-| Technical implementation / Codex | Five state tests pass; host dashboard, approval gate, OBS browser source, OAuth/EventSub code exist. | Twitch app blocked by account 2FA; real EventSub and OBS composition unverified. Optional two-agent calls unverified without API key. |
+| Technical implementation / Codex | Six tests pass; host dashboard, approval gate, OBS browser source, OAuth/EventSub code exist. | Twitch app blocked by account 2FA; real EventSub and OBS composition unverified. Optional two-agent calls unverified without API key. |
 | Design | Host page and read-only showcase inspected in browser; overlay inspected during simulated round. | Test in OBS at full 1920×1080 over a genuine camera feed, then adjust anchors/readability. |
 
 **Submission readiness:** blocked until genuine Twitch footage, video upload, and Devpost form completion. A public static showcase is a useful review surface but cannot replace the live Twitch test.

@@ -49,7 +49,7 @@ const twitch = new TwitchChat({
   onChat: (chat) => {
     const result = enqueue(state, chat);
     record('twitch_message', result.accepted ? `Queued ${chat.text} from ${chat.user}` : `Ignored: ${result.reason}`);
-    if (result.accepted) console.log(`Twitch command: ${chat.user} ${chat.text} id=${chat.id}`);
+    if (result.accepted) console.log(`Twitch command: ${chat.user} ${chat.text} id=${chat.id} event-to-queue=${Math.max(0, Date.now() - chat.timestamp)}ms`);
     broadcast();
   },
   onStatus: (status) => { state.twitch = status; record('twitch_status', `${status.status}${status.error ? `: ${status.error}` : ''}`); broadcast(); },

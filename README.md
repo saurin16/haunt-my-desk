@@ -6,7 +6,7 @@ A viewer types `!haunt mug` in a Twitch channel. The host reviews a short physic
 
 [Public showcase — labeled simulation](https://saurin16.github.io/haunt-my-desk/) · [Run instructions](app/README.md) · [Demo script draft](06-demo-script.md)
 
-> **Proof status, November 1:** The local simulated command → approval → overlay → result loop was tested in a browser, and five state tests pass. The public showcase is a simulated fixture. Twitch app registration currently requires 2FA on the signed-in account, so a real Twitch command and OBS camera composition have not yet been verified. The optional OpenAI two-agent runtime has not yet been exercised with an API key.
+> **Proof status, November 1:** The local simulated command → approval → overlay → result loop was tested in a browser, and six tests pass. The public showcase is a simulated fixture. Twitch app registration currently requires 2FA on the signed-in account, so a real Twitch command and OBS camera composition have not yet been verified. The optional OpenAI two-agent runtime has not yet been exercised with an API key.
 
 ## Why this interaction
 
@@ -20,7 +20,7 @@ Most chat games change a score, story, or virtual character. Haunt My Desk point
 - Host studio with optional camera preview, clickable object anchors, queue, review, and outcome controls.
 - Transparent 1920 × 1080 OBS browser source with animated object seal, challenge card, viewer credit, countdown, and result.
 - Read-only public showcase with an explicitly simulated fixture.
-- Five passing tests for parsing, filtering, approval, veto/fallback, and anchor bounds.
+- Six passing tests for parsing, filtering, approval, veto/fallback, catalog validation, and anchor bounds.
 
 ## Try it
 

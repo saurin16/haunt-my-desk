@@ -85,7 +85,8 @@ export class TwitchChat {
       } else if (type === 'notification' && packet.payload.subscription?.type === 'channel.chat.message') {
         const event = packet.payload.event;
         this.lastMessageAt = Date.now();
-        this.onChat({ id: event.message_id, user: event.chatter_user_login || event.chatter_user_name, text: event.message?.text, source: 'twitch', timestamp: Date.now() });
+        const sentAt = Date.parse(packet.metadata?.message_timestamp);
+        this.onChat({ id: event.message_id, user: event.chatter_user_login || event.chatter_user_name, text: event.message?.text, source: 'twitch', timestamp: Number.isFinite(sentAt) ? sentAt : Date.now() });
       } else if (type === 'revocation') {
         const reason = `Subscription revoked: ${packet.payload.subscription?.status || 'unknown'}`;
         this.stop();
