@@ -7,7 +7,7 @@ async function askAgent(role, prompt) {
   const response = await fetch('https://api.openai.com/v1/responses', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${apiKey}` },
-    body: JSON.stringify({ model, instructions: role, input: prompt, max_output_tokens: 180, store: false }),
+    body: JSON.stringify({ model, instructions: role, input: prompt, max_output_tokens: 600, store: false }),
     signal: AbortSignal.timeout(15000),
   });
   const payload = await response.json();
@@ -18,14 +18,14 @@ async function askAgent(role, prompt) {
     .map((item) => item.text)
     .join('');
   const match = text.match(/\{[\s\S]*\}/);
-  if (!match) throw new Error('Agent did not return JSON');
+  if (!match) throw new Error(`Agent did not return JSON (${payload.status || 'unknown status'}${payload.incomplete_details?.reason ? `: ${payload.incomplete_details.reason}` : ''})`);
   return JSON.parse(match[0]);
 }
 
 export async function prepareChallenge(objectId) {
   const choices = catalog[objectId]?.challenges;
   if (!choices?.length) throw new Error('Unknown object');
-  const safeDefault = choices[0];
+  const safeDefault = challengeFor(objectId, catalog[objectId].fallbackId);
   if (!apiKey) {
     return {
       challengeId: safeDefault.id,
@@ -42,7 +42,7 @@ export async function prepareChallenge(objectId) {
     );
     const chosen = challengeFor(objectId, maker.challengeId);
     const referee = await askAgent(
-      'You are an independent Safety Referee. Review the proposed physical desk challenge. Reject any unsafe, impractical, hot, sharp, fragile, forced-contact, or off-camera action. Return only JSON: {"approved":true-or-false,"reason":"short reason"}. You may veto but never rewrite the challenge.',
+      'You are an independent Safety Referee. Review the proposed desk action, not the mere existence of an object. A no-touch hand gesture over an empty mug is safe and should be approved if practical. Veto handling that risks dropping or breaking a fragile object, hot/sharp props, forced contact, or off-camera actions. Return only JSON: {"approved":true-or-false,"reason":"short reason"}. You may veto but never rewrite the challenge.',
       JSON.stringify({ objectId, proposedId: maker.challengeId, proposedChallenge: chosen, catalogOnly: true }),
     );
     const allowed = Boolean(chosen) && referee.approved === true;

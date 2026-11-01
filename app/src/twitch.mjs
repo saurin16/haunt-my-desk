@@ -3,10 +3,12 @@ import WebSocket from 'ws';
 const EVENTSUB_URL = 'wss://eventsub.wss.twitch.tv/ws';
 
 export class TwitchChat {
-  constructor({ clientId, onChat, onStatus }) {
+  constructor({ clientId, onChat, onStatus, eventSubUrl = EVENTSUB_URL, fetchImpl = fetch }) {
     this.clientId = clientId;
     this.onChat = onChat;
     this.onStatus = onStatus;
+    this.eventSubUrl = eventSubUrl;
+    this.fetch = fetchImpl;
     this.token = null;
     this.user = null;
     this.socket = null;
@@ -23,7 +25,7 @@ export class TwitchChat {
   async authorize(token) {
     if (!this.clientId) throw new Error('TWITCH_CLIENT_ID is missing');
     if (!/^[a-zA-Z0-9]{20,}$/.test(token)) throw new Error('Invalid token format');
-    const response = await fetch('https://id.twitch.tv/oauth2/validate', {
+    const response = await this.fetch('https://id.twitch.tv/oauth2/validate', {
       headers: { Authorization: `OAuth ${token}` },
       signal: AbortSignal.timeout(10000),
     });
@@ -36,7 +38,7 @@ export class TwitchChat {
     this.user = { id: info.user_id, login: info.login };
     this.stopped = false;
     this.retryCount = 0;
-    this.open(EVENTSUB_URL, false);
+    this.open(this.eventSubUrl, false);
     return this.user;
   }
 
@@ -56,7 +58,7 @@ export class TwitchChat {
     this.status('reconnecting', `Connection lost. Retrying in ${Math.round(delay / 1000)}s.`);
     this.retryTimer = setTimeout(() => {
       this.retryTimer = null;
-      this.open(EVENTSUB_URL, false);
+      this.open(this.eventSubUrl, false);
     }, delay);
   }
 
@@ -102,7 +104,7 @@ export class TwitchChat {
   }
 
   async subscribe(sessionId) {
-    const response = await fetch('https://api.twitch.tv/helix/eventsub/subscriptions', {
+    const response = await this.fetch('https://api.twitch.tv/helix/eventsub/subscriptions', {
       method: 'POST',
       headers: {
         Authorization: `Bearer ${this.token}`,

@@ -41,7 +41,7 @@ The host can enable/disable three props and click their positions in the camera 
 npm test
 ```
 
-The tests cover command parsing, duplicate and cooldown filtering, host approval, referee veto, deterministic catalog rejection, safe fallback, round logging, and anchor bounds. A real Twitch/OBS test must be performed separately; local simulation is not a substitute.
+The tests cover command parsing, duplicate and cooldown filtering, host approval, referee veto, deterministic catalog rejection, safe fallback, round logging, anchor bounds, and a mocked EventSub WebSocket exchange. A real Twitch/OBS test must be performed separately; local simulation is not a substitute.
 
 ## Sources
 

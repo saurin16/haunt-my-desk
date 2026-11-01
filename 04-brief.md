@@ -40,7 +40,7 @@ The single Node app serves the host page, OBS overlay, and read-only replay. Bro
 
 ## Measurable demonstration
 
-One real Twitch command received, one host-approved overlay round, one physical action filmed. Measure command-to-queue and approval-to-overlay latency from local timestamps. Report observed numbers only, never projected engagement or retention.
+One real Twitch command received, one host-approved overlay round, one physical action filmed. The server logs Twitch event timestamp to queue receipt; report that observation only if a real event arrives. Do not claim browser render latency or projected engagement/retention.
 
 ## Distinction and originality
 

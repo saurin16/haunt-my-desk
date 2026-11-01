@@ -22,7 +22,7 @@ test('two-agent path preserves referee veto and catalog allowlist', async () => 
     assert.equal(veto.referee.approved, false);
     const invalid = await prepareChallenge('mug');
     assert.equal(invalid.referee.approved, false);
-    assert.equal(invalid.challengeId, 'mug-reveal');
+    assert.equal(invalid.challengeId, 'mug-airspell');
     assert.equal(calls, 4);
   } finally {
     globalThis.fetch = originalFetch;

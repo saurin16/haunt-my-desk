@@ -44,6 +44,10 @@ test('referee veto needs explicit authored fallback and host approval', () => {
   useFallback(state);
   assert.equal(state.current.status, 'awaiting_approval');
   assert.equal(state.current.agentMode, 'authored-fallback');
+  assert.equal(state.current.challenge.id, 'notebook-airspell');
+  assert.equal(state.current.veto.challenge.id, 'notebook-ghost');
+  assert.equal(state.current.veto.referee.reason, 'Too much');
+  assert.equal(state.current.referee.approved, true);
   approve(state);
   finish(state, 'skipped');
   assert.equal(state.history[0].status, 'skipped');

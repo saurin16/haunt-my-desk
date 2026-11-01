@@ -96,9 +96,10 @@ function renderRound(state) {
     const ranAgents = round.agentMode === 'two-agent';
     if (round.maker) review.append(node('p', '', `${ranAgents ? 'Challenge Maker' : 'Authored challenge'}: ${round.maker.reason}`));
     if (round.referee) review.append(node('p', round.referee.approved ? 'approved' : 'vetoed', `${ranAgents ? 'Safety Referee' : 'Catalog check'}: ${round.referee.reason}`));
+    if (round.veto) review.append(node('p', 'vetoed', `Earlier Safety Referee veto: ${round.veto.referee.reason}`));
     box.append(review);
     const actions = node('div', 'round-actions');
-    if (round.status === 'vetoed') actions.append(button('Use safe fallback', () => act('fallback')));
+    if (round.status === 'vetoed' && round.fallbackAvailable) actions.append(button('Use safe fallback', () => act('fallback')));
     if (round.status === 'awaiting_approval') actions.append(button('Approve & cast spell →', () => act('approve')));
     if (round.status === 'live') {
       actions.append(button('✓ Spell broken', () => act('finish', { result: 'success' })));

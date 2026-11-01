@@ -8,7 +8,7 @@
     "objectId": "mug",
     "source": "demo",
     "status": "live",
-    "challenge": { "id": "mug-reveal", "text": "Hide the empty mug with both hands. Reveal it with a flourish.", "seconds": 30 }
+    "challenge": { "id": "mug-airspell", "text": "Cast a dramatic spell over the empty mug with your hands. Do not touch it.", "seconds": 25 }
   },
   "history": [],
   "counters": { "received": 1, "ignored": 0, "completed": 0 }

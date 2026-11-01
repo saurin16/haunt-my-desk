@@ -98,6 +98,7 @@ export function setCandidate(state, { challengeId, mode, maker, referee }) {
   state.current.agentMode = mode;
   state.current.maker = maker;
   state.current.referee = referee;
+  state.current.fallbackAvailable = challenge.id !== catalog[state.current.objectId].fallbackId;
   state.current.status = referee.approved ? 'awaiting_approval' : 'vetoed';
   state.updatedAt = Date.now();
   return state.current;
@@ -105,9 +106,17 @@ export function setCandidate(state, { challengeId, mode, maker, referee }) {
 
 export function useFallback(state) {
   if (!state.current || state.current.status !== 'vetoed') throw new Error('No vetoed round');
-  const challenge = catalog[state.current.objectId].challenges[0];
+  const challenge = challengeFor(state.current.objectId, catalog[state.current.objectId].fallbackId);
+  if (!state.current.fallbackAvailable || !challenge) throw new Error('No separate safe fallback; skip this round');
+  state.current.veto = {
+    challenge: state.current.challenge,
+    maker: state.current.maker,
+    referee: state.current.referee,
+  };
   state.current.challenge = challenge;
   state.current.agentMode = 'authored-fallback';
+  state.current.maker = { reason: 'No-touch fallback written and reviewed before the stream.' };
+  state.current.referee = { approved: true, reason: 'Catalog allowlist check passed. Host approval is still required.' };
   state.current.status = 'awaiting_approval';
   state.current.fallbackUsed = true;
   state.updatedAt = Date.now();

@@ -146,7 +146,7 @@ const server = http.createServer(async (request, response) => {
       if (url.pathname === '/api/approve') {
         const round = approve(state);
         record('host_approval', `${round.objectId} by ${round.user}`);
-        console.log(`Approved round ${round.id}; approval-to-overlay broadcast at ${Date.now() - round.approvedAt}ms`);
+        console.log(`Approved round ${round.id}; overlay state broadcast`);
         broadcast();
         return json(response, 200, round);
       }
