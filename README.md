@@ -6,7 +6,7 @@ A viewer types `!haunt mug` in a Twitch channel. The host reviews a short physic
 
 [Public showcase — labeled simulation](https://saurin16.github.io/haunt-my-desk/) · [Run instructions](app/README.md) · [Demo script draft](06-demo-script.md)
 
-> **Proof status, November 1:** A real `!haunt mug` message from `saurin1602` reached the EventSub queue, two API-backed agents reviewed its catalog challenge, and host approval displayed the overlay with the real sender credited. The test round was skipped because no camera action was performed. Seven tests pass. The public showcase remains a labeled simulation; OBS camera composition and filmed physical payoff are still pending.
+> **Proof status, November 1:** A real `!haunt mug` message from `saurin1602` reached the EventSub queue, two API-backed agents reviewed its catalog challenge, and host approval displayed the overlay with the real sender credited. The test round was skipped because no camera action was performed. The host camera preview now shows a real mug with the anchor aligned after a transparency fix. Seven tests pass. The public showcase remains a labeled simulation; OBS composition and filmed physical payoff are still pending.
 
 ## Why this interaction
 
