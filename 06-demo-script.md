@@ -4,7 +4,7 @@
 
 | Time | Shot | Narration / on-screen message |
 |---|---|---|
-| 0:00–0:10 | Real Twitch chat sends `!haunt mug`; camera shows mug and the OBS seal landing | “Chat just cursed the mug on my desk. I have 30 seconds to break it.” |
+| 0:00–0:10 | Real Twitch chat sends `!haunt mug`; camera shows mug and the OBS seal landing | “Chat just cursed the mug on my desk. I have 25 seconds to break it.” |
 | 0:10–0:27 | Split view: chat command, host queue, OBS output | “One message chooses a real object in my camera shot. It waits for my approval before touching the stream.” |
 | 0:27–0:45 | Host camera map with anchored mug, notebook, plush | “I mark a few safe props once. The overlay follows those fixed spots.” |
 | 0:45–1:15 | Show challenge preparation and review, with exact mode label visible | If two-agent mode was tested: “Challenge Maker selects from the approved catalog; Safety Referee can veto. The allowlist and my approval still gate the stream.” If authored mode: “This demo uses the authored catalog; an optional two-agent mode is in the code but is not demonstrated here.” |
@@ -19,5 +19,5 @@
 - OBS output or recording shows webcam/phone shot and browser source aligned.
 - Codex task footage, not slides replacing it.
 - Under 3 minutes; publicly viewable or unlisted on YouTube; no copyrighted music.
-- Record actual command-to-queue and approval-to-overlay observations if metrics are spoken.
+- If metrics are spoken, use only actual observations. One earlier chat command reached the queue in a logged 100 ms; the camera demo needs its own observation.
 - Upload early; check processing and the Devpost **Submitted** state.

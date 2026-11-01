@@ -17,13 +17,12 @@ Codex was used to implement the state machine, EventSub integration, host studio
 - Source: https://github.com/saurin16/haunt-my-desk
 - Public showcase: https://saurin16.github.io/haunt-my-desk/ (verify live)
 - YouTube video: **TODO**
-- Twitch channel: **TODO**
+- Twitch channel: https://www.twitch.tv/saurin1602 (real command verified; filmed stream pending)
 - Codex session ID: **TODO**
 
 ## Honesty gate before submission
 
-- Do not say the Twitch command worked until the logged-in channel sends one and the EventSub subscriber records it.
-- Do not say two agents ran until a real API-key-backed round logs both calls.
+- A real Twitch command and two API-backed agent reviews were verified locally on November 1; present this as a test, not as filmed stream footage.
 - Do not describe the public static showcase as a live Twitch integration.
 - Do not claim automatic object tracking or physical action detection.
 - Replace this draft after filming with tested observations, exact metrics, and URLs.

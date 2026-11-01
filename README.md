@@ -6,7 +6,7 @@ A viewer types `!haunt mug` in a Twitch channel. The host reviews a short physic
 
 [Public showcase — labeled simulation](https://saurin16.github.io/haunt-my-desk/) · [Run instructions](app/README.md) · [Demo script draft](06-demo-script.md)
 
-> **Proof status, November 1:** The local simulated command → approval → overlay → result loop was tested in a browser, and seven tests pass, including a mocked EventSub WebSocket contract. The public showcase is a simulated fixture. Challenge Maker and Safety Referee both ran with an API key in a local simulated round, and the referee separately vetoed a mug-handling proposal in another call. Twitch app registration currently requires 2FA on the signed-in account, so a real Twitch command and OBS camera composition have not yet been verified.
+> **Proof status, November 1:** A real `!haunt mug` message from `saurin1602` reached the EventSub queue, two API-backed agents reviewed its catalog challenge, and host approval displayed the overlay with the real sender credited. The test round was skipped because no camera action was performed. Seven tests pass. The public showcase remains a labeled simulation; OBS camera composition and filmed physical payoff are still pending.
 
 ## Why this interaction
 
@@ -14,7 +14,7 @@ Most chat games change a score, story, or virtual character. Haunt My Desk point
 
 ## What is built
 
-- Twitch OAuth and EventSub WebSocket client for `channel.chat.message` (mock contract passed, live proof pending).
+- Twitch OAuth and EventSub WebSocket client for `channel.chat.message` (mock contract and one real channel command verified).
 - Complete-command parser, duplicate and cooldown filtering, eight-command queue.
 - Challenge Maker and Safety Referee as optional distinct OpenAI Responses API calls. Without an API key, the interface labels authored mode. A deterministic catalog and host approval gate every challenge.
 - Host studio with optional camera preview, clickable object anchors, queue, review, and outcome controls.
