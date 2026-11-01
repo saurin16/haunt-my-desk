@@ -1,0 +1,16 @@
+{
+  "name": "haunt-my-desk",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node --env-file-if-exists=.env src/server.mjs",
+    "dev": "node --env-file-if-exists=.env --watch src/server.mjs",
+    "test": "node --test",
+    "build:pages": "node scripts/build-pages.mjs"
+  },
+  "dependencies": {
+    "ws": "^8.18.3"
+  },
+  "engines": { "node": ">=22" }
+}

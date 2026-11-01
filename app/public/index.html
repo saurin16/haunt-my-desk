@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Haunt My Desk — host studio</title>
+  <link rel="stylesheet" href="/assets/style.css">
+</head>
+<body class="studio-body">
+  <main class="studio">
+    <header class="topbar">
+      <a class="brand" href="/"><span class="brand-mark">✦</span><span>HAUNT <em>MY DESK</em></span></a>
+      <div class="topbar-right"><span id="mode-chip" class="chip">AUTHORED MODE</span><span id="twitch-chip" class="chip disconnected"><i></i> TWITCH OFFLINE</span></div>
+    </header>
+
+    <section class="hero">
+      <div><p class="eyebrow">THE STREAM IS YOUR HAUNTED HOUSE</p><h1>Make chat<br><span>touch reality.</span></h1><p class="hero-copy">Viewers curse a real object in your camera shot. You approve a safe challenge, do it live, and let chat watch the spell break.</p></div>
+      <div class="hero-glyph" aria-hidden="true"><span>✦</span><i></i><i></i><i></i></div>
+    </section>
+
+    <div id="public-note" class="notice hidden">This is the public view. Host controls require the private URL printed when the server starts. <a href="/showcase">Watch the showcase</a>.</div>
+    <div id="error" class="notice error hidden" role="alert"></div>
+
+    <section class="grid-main">
+      <div class="left-stack">
+        <article class="panel camera-panel">
+          <div class="panel-heading"><div><p class="eyebrow">01 / SET THE STAGE</p><h2>Camera map</h2></div><button id="camera-btn" class="button subtle">Start camera preview</button></div>
+          <div id="camera-map" class="camera-map">
+            <video id="camera-video" autoplay muted playsinline></video>
+            <div class="camera-placeholder"><div class="camera-icon">⌁</div><span>CAMERA PREVIEW</span><small>Start camera, then click to place the selected object</small></div>
+            <iframe title="Live overlay preview" src="/overlay" class="preview-overlay"></iframe>
+            <div id="anchor-layer" class="anchor-layer"></div>
+            <div class="viewfinder top-left"></div><div class="viewfinder top-right"></div><div class="viewfinder bottom-left"></div><div class="viewfinder bottom-right"></div>
+          </div>
+          <div class="camera-hint"><span>✥</span> Select a prop, then click its position in the camera frame. Match your OBS camera crop to this 16:9 frame.</div>
+          <div id="objects" class="object-list"></div>
+        </article>
+
+        <article class="panel instructions-panel">
+          <div class="panel-heading"><div><p class="eyebrow">02 / CONNECT THE AUDIENCE</p><h2>Twitch & OBS</h2></div></div>
+          <div class="setup-step"><span class="step-num">1</span><div><strong>Connect your channel</strong><p>Sign in with Twitch to receive real <code>!haunt mug</code> messages via EventSub.</p></div><button id="connect-btn" class="button primary">Connect Twitch ↗</button></div>
+          <div class="setup-step"><span class="step-num">2</span><div><strong>Add the overlay in OBS</strong><p>Create a Browser Source, 1920 × 1080, over your camera. Use this URL:</p><code id="overlay-url" class="url-box"></code></div><button id="copy-btn" class="button subtle">Copy</button></div>
+          <div class="setup-step"><span class="step-num">3</span><div><strong>Invite chat to cast</strong><p>Viewers type <code>!haunt mug</code>, <code>!haunt notebook</code>, or <code>!haunt plush</code>.</p></div></div>
+        </article>
+      </div>
+
+      <div class="right-stack">
+        <article class="panel queue-panel">
+          <div class="panel-heading"><div><p class="eyebrow">03 / STAGE A SPELL</p><h2>Control room</h2></div><span id="queue-count" class="count">0 queued</span></div>
+          <div id="current-round" class="current-round empty"><div class="empty-symbol">✧</div><strong>Waiting for a curse</strong><p>A viewer command will arrive here. You control what goes live.</p></div>
+          <div id="queue-list" class="queue-list"></div>
+          <button id="next-btn" class="button primary full" disabled>Prepare next curse →</button>
+          <div class="demo-control"><span>LOCAL TEST ONLY</span><div><input id="demo-user" value="demo_viewer" aria-label="Demo viewer name"><select id="demo-object" aria-label="Demo object"><option value="mug">mug</option><option value="notebook">notebook</option><option value="plush">plush</option></select><button id="demo-btn" class="button subtle">Simulate command</button></div><small>Clearly labeled simulation; use real Twitch chat for the submission video.</small></div>
+        </article>
+
+        <article class="panel ledger-panel">
+          <div class="panel-heading"><div><p class="eyebrow">04 / THE AFTERMATH</p><h2>Spell ledger</h2></div><span class="ledger-icon">◈</span></div>
+          <div class="stats"><div><b id="stat-received">0</b><span>COMMANDS</span></div><div><b id="stat-completed">0</b><span>BROKEN SPELLS</span></div><div><b id="stat-ignored">0</b><span>FILTERED</span></div></div>
+          <div id="history-list" class="history-list"><p class="muted">No rounds yet.</p></div>
+        </article>
+      </div>
+    </section>
+    <footer>Built with Codex for TwitchCon 2026 <span>✦</span> Host approval before every on-stream challenge <span>✦</span> <a href="/showcase">Public showcase</a></footer>
+  </main>
+  <script type="module" src="/assets/dashboard.js"></script>
+</body>
+</html>

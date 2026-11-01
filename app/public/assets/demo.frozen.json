@@ -1,0 +1,15 @@
+{
+  "objects": {
+    "mug": { "id": "mug", "label": "Empty mug", "icon": "☕", "accent": "#ffbb7c", "x": 0.29, "y": 0.52, "enabled": true }
+  },
+  "current": {
+    "id": "fixture-001",
+    "user": "ghost_in_chat",
+    "objectId": "mug",
+    "source": "demo",
+    "status": "live",
+    "challenge": { "id": "mug-reveal", "text": "Hide the empty mug with both hands. Reveal it with a flourish.", "seconds": 30 }
+  },
+  "history": [],
+  "counters": { "received": 1, "ignored": 0, "completed": 0 }
+}

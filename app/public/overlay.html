@@ -1,0 +1,13 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Haunt My Desk — OBS overlay</title><link rel="stylesheet" href="/assets/style.css"></head>
+<body class="overlay-body">
+  <main id="overlay-stage" class="overlay-stage" aria-live="polite">
+    <div id="showcase-label" class="showcase-label hidden">SHOWCASE · SIMULATED ROUND</div>
+    <div id="haunt-marker" class="haunt-marker hidden"><div class="outer-ring"></div><div class="inner-ring"></div><div class="marker-symbol">✦</div><div class="marker-label">CURSED OBJECT</div></div>
+    <div id="spell-card" class="spell-card hidden"><div class="spell-top"><span class="live-dot"></span><span>DESK HAUNT IN PROGRESS</span><span id="spell-number">#001</span></div><div class="spell-title"><span id="object-icon">☕</span><div><p id="object-name">EMPTY MUG</p><h1 id="challenge-text">Hide the empty mug with both hands.</h1></div></div><div class="spell-bottom"><div><small>CAST BY</small><strong id="viewer-name">viewer</strong></div><div class="timer"><span id="timer-value">30</span><small>SEC</small></div></div><div id="timer-bar" class="timer-bar"></div></div>
+    <div id="result-card" class="result-card hidden"><div id="result-sigil" class="result-sigil">✦</div><p id="result-label">SPELL BROKEN</p><strong id="result-viewer">viewer</strong></div>
+  </main>
+  <script type="module" src="/assets/overlay.js"></script>
+</body>
+</html>
