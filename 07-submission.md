@@ -1,4 +1,4 @@
-# Devpost submission draft — video upload and session ID pending
+# Devpost submission draft — session ID and entrant answers pending
 
 **Title:** Haunt My Desk
 
@@ -16,7 +16,7 @@ Codex was used to implement the state machine, EventSub integration, host studio
 
 - Source: https://github.com/saurin16/haunt-my-desk
 - Public showcase: https://saurin16.github.io/haunt-my-desk/ (verify live)
-- YouTube video: **TODO — 72-second captioned local cut is ready for upload**
+- YouTube video: https://youtu.be/7xoCHCcNqss (unlisted, verified in YouTube Studio)
 - Twitch channel: https://www.twitch.tv/saurin1602 (real chat command verified; OBS recording was local)
 - Codex session ID: **TODO**
 
@@ -37,4 +37,4 @@ Codex was used to implement the state machine, EventSub integration, host studio
 - A real Twitch command and two API-backed agent reviews were verified locally on November 1. The OBS recording captured a no-touch gesture and the host-recorded success outcome. It was not broadcast live on Twitch.
 - Do not describe the public static showcase as a live Twitch integration.
 - Do not claim automatic object tracking or physical action detection.
-- Add the YouTube video URL and confirmed Codex session ID before final submission.
+- Confirm the main Codex session ID and complete the entrant's required Devpost answers before final submission.

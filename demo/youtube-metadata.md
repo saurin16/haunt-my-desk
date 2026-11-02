@@ -18,4 +18,4 @@ The narration is the streamer's own recorded voice. Captions are burned into the
 
 ## Visibility
 
-Unlisted. Anyone with the link can view it, including Devpost judges. Do not choose Private.
+Published unlisted on November 2, 2026: https://youtu.be/7xoCHCcNqss. YouTube Studio verified the visibility as Unlisted. Anyone with the link can view it, including Devpost judges.
