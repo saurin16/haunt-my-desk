@@ -43,11 +43,11 @@ Test the loop during a live Twitch broadcast with viewers, improve the host's on
 - Public showcase (labeled simulation): https://saurin16.github.io/haunt-my-desk/
 - Twitch channel: https://www.twitch.tv/saurin1602
 - YouTube demo: https://youtu.be/7xoCHCcNqss (unlisted)
-- Main Codex session ID: **confirm before submission**
+- Main Codex session ID: `01a1906b-625a-75c2-b772-e7904e8af611`
 
 ## Submission checks
 
 - The local video and captions are ready. It contains actual screenshots of the verified Twitch chat command and host result ledger, plus genuine local OBS footage. The video does not contain a screen recording of the Twitch chat page or Codex interface.
 - The local recording was not a live Twitch broadcast. Do not imply otherwise.
 - Object positions are manually anchored; the app does not track props or detect the physical gesture automatically.
-- Confirm the main Codex session ID and the entrant's required form answers before submitting.
+- The main Codex session ID and entrant's required form answers were confirmed on November 2, 2026.
