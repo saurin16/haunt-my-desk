@@ -1,23 +1,14 @@
-# Haunt My Desk — conditional video script
+# Haunt My Desk — 72-second demo cut
 
-**Status:** shot plan only. Record genuine Twitch and OBS footage before using this narration. No simulated clip may be passed off as live.
+The finished local video is `demo/haunt-my-desk-final.mp4` (kept off GitHub because it contains the streamer's face and voice). The complete narration and captions are in `demo/transcript.md` and `demo/captions.srt`.
 
-| Time | Shot | Narration / on-screen message |
+| Time | Picture | Voice |
 |---|---|---|
-| 0:00–0:10 | Real Twitch chat sends `!haunt mug`; camera shows mug and the OBS seal landing | “Chat just cursed the mug on my desk. I have 25 seconds to break it.” |
-| 0:10–0:27 | Split view: chat command, host queue, OBS output | “One message chooses a real object in my camera shot. It waits for my approval before touching the stream.” |
-| 0:27–0:45 | Host camera map with anchored mug, notebook, plush | “I mark a few safe props once. The overlay follows those fixed spots.” |
-| 0:45–1:15 | Show challenge preparation and review, with exact mode label visible | If two-agent mode was tested: “Challenge Maker selects from the approved catalog; Safety Referee can veto. The allowlist and my approval still gate the stream.” If authored mode: “This demo uses the authored catalog; an optional two-agent mode is in the code but is not demonstrated here.” |
-| 1:15–1:45 | Host approves; camera action; countdown; host records result | “The challenge is visible on Twitch. I do it in the real shot and mark the result; the viewer gets credit.” |
-| 1:45–2:06 | Failure/recovery: live invalid command ignored or host skips one round; use genuine footage | “Bad commands never hit the stream. The host can skip a challenge at any point.” |
-| 2:06–2:30 | Codex task, key source files, tests | “I built the EventSub connection, review gate, OBS overlay and test suite with Codex. Here are the actual checks.” |
-| 2:30–2:45 | Real live result, repo and public showcase URL | “Haunt My Desk turns a chat command into a small, physical moment viewers can watch.” |
+| 0:00–0:10 | Actual Twitch chat screenshot and a real camera still of the streamer holding the red mug | Real `!haunt mug` command; EventSub delivery |
+| 0:10–0:20 | Diagram of chat → EventSub → host queue → OBS | Host marks the mug and approves what reaches the overlay |
+| 0:20–0:32 | Challenge Maker, Safety Referee, catalog and host gate | Safe catalog review and final decision |
+| 0:32–0:46 | Genuine local OBS camera recording: timer, no-touch gesture, credited success | Spell appears; streamer waves above the mug; viewer credited |
+| 0:46–0:58 | Actual EventSub source excerpt and test count | Codex build story and fixed transparency bug |
+| 0:58–1:12 | End card and links | Local recording disclosure; public showcase labeled simulation |
 
-## Capture checklist
-
-- Real Twitch channel URL and chat message visible in the same recording as the overlay result.
-- OBS output or recording shows webcam/phone shot and browser source aligned.
-- Codex task footage, not slides replacing it.
-- Under 3 minutes; publicly viewable or unlisted on YouTube; no copyrighted music.
-- If metrics are spoken, use only actual observations. One earlier chat command reached the queue in a logged 100 ms; the camera demo needs its own observation.
-- Upload early; check processing and the Devpost **Submitted** state.
+This video contains real Twitch chat evidence and a Twitch-triggered local OBS recording. It was not broadcast live on Twitch. It does not contain a screen recording of the Codex interface, though the source excerpt and narration describe Codex's contribution. Adding live Twitch and Codex interface footage would strengthen the submission if there is time.

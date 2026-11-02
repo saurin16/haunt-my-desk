@@ -4,9 +4,9 @@
 
 A viewer types `!haunt mug` in a Twitch channel. The host reviews a short physical challenge and approves it. An OBS browser source places an animated seal over the mug in the camera shot and starts a countdown. The streamer performs the challenge, marks the outcome, and gives the viewer on-screen credit.
 
-[Public showcase — labeled simulation](https://saurin16.github.io/haunt-my-desk/) · [Run instructions](app/README.md) · [Demo script draft](06-demo-script.md)
+[Public showcase — labeled simulation](https://saurin16.github.io/haunt-my-desk/) · [Run instructions](app/README.md) · [Video shot list](06-demo-script.md)
 
-> **Proof status, November 1:** A real `!haunt mug` message from `saurin1602` reached the EventSub queue, two API-backed agents reviewed its catalog challenge, and host approval displayed the overlay with the real sender credited. That round was skipped because no camera action was performed. OBS now composites a live MacBook camera feed with the transparent 1920 × 1080 browser source; a separate, clearly simulated local test showed the animated seal aligned over the real red mug and the challenge card in OBS. That test was also skipped without a physical performance. Seven tests pass. A genuine filmed Twitch-to-camera payoff remains pending.
+> **Proof status, November 1:** A real `!haunt mug` message from `saurin1602` reached the Twitch EventSub queue. Two API-backed agents reviewed a safe catalog challenge, the host approved it, and OBS recorded the overlay over the real red mug. The camera recording visibly shows a no-touch hand gesture during the countdown; the host marked **Spell broken**, and the success card credited `saurin1602`. A 72-second local demo cut with the streamer's recorded narration and captions is complete. This was an OBS recording, not a live Twitch broadcast. Seven tests pass.
 
 ## Why this interaction
 
@@ -49,6 +49,6 @@ flowchart LR
 - [Rules](00-rules.md) · [Trend scan](01-trend-scan.md) · [Pain evidence](02-pain-points.md) · [Concept comparison](03-concepts-revised.md)
 - [Product brief](04-brief.md) · [Build gates](05-build-plan.md) · [Video plan](06-demo-script.md) · [Submission draft](07-submission.md) · [Rubric audit](08-rubric-audit.md)
 - Repo: https://github.com/saurin16/haunt-my-desk · Public showcase: https://saurin16.github.io/haunt-my-desk/
-- Video: pending real Twitch/OBS recording.
+- Video: 72-second local cut complete with narration and captions; YouTube upload pending.
 
 The original code and artwork were created for this event. Earlier projects were used only as inspiration for the audience-participation pattern; no prior project code or assets were copied.

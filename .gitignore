@@ -1,1 +1,8 @@
 .DS_Store
+demo/frames/
+demo/*.wav
+demo/*.mov
+demo/*.mp4
+demo/*.m4a
+demo/*.py
+demo/voice-transcript.tsv

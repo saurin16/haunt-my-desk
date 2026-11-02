@@ -1,4 +1,4 @@
-# Devpost submission draft — not ready to submit
+# Devpost submission draft — video upload and session ID pending
 
 **Title:** Haunt My Desk
 
@@ -10,19 +10,19 @@ Haunt My Desk gives a Twitch audience a visible way to change a streamer's real 
 
 The code includes a Twitch EventSub WebSocket subscriber for `channel.chat.message`, a command queue, a host approval gate, a transparent overlay, and a round ledger. Two optional OpenAI Responses API specialists can choose and review a challenge; deterministic catalog validation and the host control what appears on stream. Without an API key, the app explicitly uses authored catalog mode. The public showcase uses a clearly labeled simulated fixture.
 
-Codex was used to implement the state machine, EventSub integration, host studio, OBS overlay, and tests. During live testing, it helped diagnose and fix a CSS transparency bug that hid the camera beneath the overlay. After the fix, a real Twitch chat command reached the queue, two API-backed agents reviewed a catalog challenge, and OBS displayed the animated seal over a real mug. The local camera take recorded on November 1 timed out without a physical gesture, so a completed on-camera take remains to be filmed. **Add the actual Codex session ID before submitting.**
+Codex was used to implement the state machine, EventSub integration, host studio, OBS overlay, and tests. During live testing, it helped diagnose and fix a CSS transparency bug that hid the camera beneath the overlay. In the completed November 1 local OBS take, a real Twitch chat command reached the queue, two API-backed agents reviewed a catalog challenge, and host approval displayed the spell over a real mug. The streamer visibly waved a free hand above the mug during the countdown, and the host marked the spell broken. The result card credited the Twitch sender. **Add the actual Codex session ID before submitting.**
 
-## Links to add after proof
+## Links and remaining details
 
 - Source: https://github.com/saurin16/haunt-my-desk
 - Public showcase: https://saurin16.github.io/haunt-my-desk/ (verify live)
-- YouTube video: **TODO**
-- Twitch channel: https://www.twitch.tv/saurin1602 (real command verified; filmed stream pending)
+- YouTube video: **TODO — 72-second captioned local cut is ready for upload**
+- Twitch channel: https://www.twitch.tv/saurin1602 (real chat command verified; OBS recording was local)
 - Codex session ID: **TODO**
 
 ## Honesty gate before submission
 
-- A real Twitch command and two API-backed agent reviews were verified locally on November 1. An OBS recording captured the real command's overlay on a mug, but that challenge timed out without a physical gesture. Do not present it as a completed on-camera performance.
+- A real Twitch command and two API-backed agent reviews were verified locally on November 1. The OBS recording captured a no-touch gesture and the host-recorded success outcome. It was not broadcast live on Twitch.
 - Do not describe the public static showcase as a live Twitch integration.
 - Do not claim automatic object tracking or physical action detection.
-- Replace this draft after filming with tested observations, exact metrics, and URLs.
+- Add the YouTube video URL and confirmed Codex session ID before final submission.
