@@ -10,7 +10,7 @@ Haunt My Desk gives a Twitch audience a visible way to change a streamer's real 
 
 The code includes a Twitch EventSub WebSocket subscriber for `channel.chat.message`, a command queue, a host approval gate, a transparent overlay, and a round ledger. Two optional OpenAI Responses API specialists can choose and review a challenge; deterministic catalog validation and the host control what appears on stream. Without an API key, the app explicitly uses authored catalog mode. The public showcase uses a clearly labeled simulated fixture.
 
-Codex was used to implement the state machine, EventSub integration, host studio, OBS overlay, and tests. **Replace this paragraph with the actual Codex session ID and a concise build/fix story.**
+Codex was used to implement the state machine, EventSub integration, host studio, OBS overlay, and tests. During live testing, it helped diagnose and fix a CSS transparency bug that hid the camera beneath the overlay. After the fix, a real Twitch chat command reached the queue, two API-backed agents reviewed a catalog challenge, and OBS displayed the animated seal over a real mug. The local camera take recorded on November 1 timed out without a physical gesture, so a completed on-camera take remains to be filmed. **Add the actual Codex session ID before submitting.**
 
 ## Links to add after proof
 
@@ -22,7 +22,7 @@ Codex was used to implement the state machine, EventSub integration, host studio
 
 ## Honesty gate before submission
 
-- A real Twitch command and two API-backed agent reviews were verified locally on November 1; present this as a test, not as filmed stream footage.
+- A real Twitch command and two API-backed agent reviews were verified locally on November 1. An OBS recording captured the real command's overlay on a mug, but that challenge timed out without a physical gesture. Do not present it as a completed on-camera performance.
 - Do not describe the public static showcase as a live Twitch integration.
 - Do not claim automatic object tracking or physical action detection.
 - Replace this draft after filming with tested observations, exact metrics, and URLs.
