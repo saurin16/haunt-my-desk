@@ -47,7 +47,7 @@ Test the loop during a live Twitch broadcast with viewers, improve the host's on
 
 ## Submission checks
 
-- The local video and captions are ready. Its opening card contains an actual screenshot of the verified Twitch chat command, and the action clip is genuine local OBS footage. The video does not contain a screen recording of the Twitch chat page or Codex interface.
+- The local video and captions are ready. It contains actual screenshots of the verified Twitch chat command and host result ledger, plus genuine local OBS footage. The video does not contain a screen recording of the Twitch chat page or Codex interface.
 - The local recording was not a live Twitch broadcast. Do not imply otherwise.
 - Object positions are manually anchored; the app does not track props or detect the physical gesture automatically.
 - Confirm the final YouTube URL and main Codex session ID before submitting.
