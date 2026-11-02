@@ -20,6 +20,18 @@ Codex was used to implement the state machine, EventSub integration, host studio
 - Twitch channel: https://www.twitch.tv/saurin1602 (real chat command verified; OBS recording was local)
 - Codex session ID: **TODO**
 
+## Required Devpost answers
+
+**Submitter type:** Individual, if the streamer is the sole entrant. Confirm on the form.
+
+**Country of residence:** Complete from the entrant's own answer.
+
+**How it meets the technology requirement:** I used OpenAI Codex to build and debug the Node.js Twitch EventSub chat listener, bounded command queue, two-agent review gate, host studio, transparent OBS overlay, and tests. The app connects to Twitch through OAuth and `channel.chat.message` events. A real `!haunt mug` message reached the host queue and drove the local OBS camera take. The public static showcase is labeled as a simulation.
+
+**How streamers and their community use it:** The streamer marks a few safe props in the camera frame and adds the transparent overlay as an OBS browser source. Viewers cast `!haunt mug`, `!haunt notebook`, or `!haunt plush` in Twitch chat. The streamer approves a safe challenge, performs it in view of the camera, and marks the result. The viewer receives on-screen credit. The host can skip a challenge, and the catalog plus host approval gate what can appear on screen.
+
+**Experience survey and eligibility:** The entrant must choose the two survey ratings and personally attest to age, residence eligibility, and sponsor affiliation before final submission.
+
 ## Honesty gate before submission
 
 - A real Twitch command and two API-backed agent reviews were verified locally on November 1. The OBS recording captured a no-touch gesture and the host-recorded success outcome. It was not broadcast live on Twitch.
